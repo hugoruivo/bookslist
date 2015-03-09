@@ -1,0 +1,85 @@
+.loading-img {
+	margin-left: 10px;
+	width: 16px;
+	height: 16px;
+}
+
+.central-content {
+	width: 800px;
+}
+
+.scrollable-header {
+	padding: 5px 0px 5px 0px;
+	line-height: 25px;
+	font-size: 15px;
+	border-bottom: 1px solid #AAAAAA;
+}
+
+.scrollable-content {
+	height: 500px;
+	overflow: scroll;
+	line-height: 18px;
+	font-size: 15px;
+	padding-top: 15px;
+}
+
+.scrollable-item {
+	border-bottom: 1px solid #AAAAAA;
+	min-height: 60px;
+}
+
+.horror-halloween-date {
+	background: url('../img/halloween.jpeg') no-repeat;
+	color: #FFFFFF;
+	font-weight: bolder;
+	background-size: 100% 100%;
+}
+
+.last-friday-month-finance-date {
+	background: url('../img/money_bag.jpeg') repeat;
+	color: #FEFFFF;
+	font-weight: bolder;
+	background-size: auto 100%;
+}
+
+.clear-btns-wrapper {
+	margin-top: 20px;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.left {
+	float: left;
+}
+
+.content-column {
+	width: 140px;
+	padding: 10px;
+	word-wrap: break-word;
+}
+
+.clearboth {
+	clear: both;
+}
+
+.automargin {
+	margin: auto;
+}
+
+.no-sort {
+	background-image: none;
+}
+
+.sort-asc {
+	background: url('../img/up_arrow.png') no-repeat;
+	background-size: 20px 20px;
+	background-position: 70% center;
+}
+
+.sort-desc {
+	background: url('../img/down_arrow.png') no-repeat;
+	background-size: 20px 20px;
+	background-position: 70% center;
+}

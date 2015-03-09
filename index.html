@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Build random books titles</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+		<script type="text/javascript" src="assets/js/globals.js"></script>
+
+		<script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="assets/js/knockout-3.3.0.js"></script>
+
+	</head>
+
+	<body>
+		<div class="scrollWrapper central-content automargin">
+			<div class="filter-wrapper">
+				<div>
+					Filters:
+				</div>
+				<div>
+					Book Genre: <select data-bind="options: bookGenres, value: selectedBookGenre, event: { change: bookGenreChanged }"></select>
+					Author Gender: <select data-bind="options: authorGender, value: selectedAuthorGender, optionsText: 'genderText', event: { change: genderChanged }"></select>
+				</div>
+				<div class="clear-btns-wrapper">
+					<button data-bind="click: clearFilters">Clear Filters</button>
+					<button data-bind="click: clearSort">Clear Sorts</button>
+				</div>
+			</div>
+
+			<div class="scrollable-header">
+				<span data-bind="text: myBooks().length" style="padding-left: 10px;"></span>
+				/
+				<span data-bind="text: totalBooks"></span>
+				<img class="loading-img" src="assets/img/loading.gif" data-bind="visible: pendingRequest" />
+				<br />
+				<div data-bind="click: sortByBookTitle" class="left content-column">Book Title:</div>
+				<div class="left content-column">Book Genre:</div>
+				<div class="left content-column">Book Publish Date:</div>
+				<div data-bind="click: sortByAuthor" class="left content-column">Book Author:</div>
+				<div class="left content-column">Author Gender:</div>
+				<div class="clearboth"></div>
+			</div>
+			<div class="scrollable-content" data-bind="foreach: myBooks, event: { scroll: scrolled }">
+				<div class="scrollable-item" data-bind="css: $root.addAditionalCssClass(publish_date, genre)">
+					<div class="left content-column" data-bind="text: name"></div>
+					<div class="left content-column" data-bind="text: genre"></div>
+					<div class="left content-column" data-bind="text: publish_date"></div>
+					<div class="left content-column" data-bind="text: author.name"></div>
+					<div class="left content-column capitalize" data-bind="text: author.gender"></div>
+					<div class="clearboth"></div>
+				</div>
+			</div>
+		</div>	
+		<script type="text/javascript" src="assets/js/BooksList.js"></script>
+	</body>
+</html>
+

@@ -9,6 +9,7 @@ The data is loaded by scrolling the list to the bottom.
 
 Feel free to change this at your will ( can build your own API on your own server ), or try partial JSON file loading. ( One million register in a single shot where breaking things... ).
 
+##Filters and Sort order
 Clicking on the "Book Title:" column will sort the list by book name ( ASC or DESC ). Same goes with the "Book Author:" column.
 
 You can apply two types of filters, by author gender ( male / female ) and by book genre.

@@ -37,6 +37,7 @@ var API_KEY = "NWtw3AMdRxfGN7iGTujH0Oh-HzrbEcwU";
 //Controls the minimum number of entries to load each time
 var MIN_ENTRIES_TO_LOAD = 100;
 ```
+After that put all your content inside your http server and load it.
 
 ##Licence
 This project is licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License) so feel free to hack away :)
